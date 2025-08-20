@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background : #080808;
+    color : #fff;
+}
+#header{
+    width: 100%;
+    height: 80vh;
+    background-image: url(portfolio/backgroung.png.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between text and image */
+}
+
+.header-text {
+  flex: 1; /* text takes available space */
+  color: white;
+}
+
+.header-image img {
+  max-width: 300px; /* resize the image */
+  border-radius: 10px; /* optional rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px; /* space between text and image */
+  padding: 40px 0; /* add vertical space */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-text {
+  flex: 1;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.header-text span {
+  color: #00ff88; /* highlight your name */
+}
+
+.header-image {
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+.header-image img {
+  max-width: 350px;  /* image size */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+#header {
+  padding-bottom: 80px; /* enough space so image won't overflow */
+  background: /* your background or color here */;
+  position: relative;
+  z-index: 1;
+}
+
+.container{
+    padding:10px 10%;
+
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position:absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+.header-text h1{
+    font-size:60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#ff004f;
+}
+/* ---------- About Section ---------- */
+#about {
+  padding: 80px 10%;
+  color: #ababab;
+  background-color: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 15px #ff004f;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff004f;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #ddd;
+  font-weight: 400;
+}
+
+.education-section h2 {
+  font-size: 32px;
+  color: #ff004f;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.education-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education-section ul li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ddd;
+  font-weight: 400;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.education-section ul li span {
+  color: #ff004f;
+  font-weight: 700;
+  font-size: 16px;
+  min-width: 50px;
+}
+
+.education-section ul li small {
+  color: #b54769;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* --------------- Skills Section (Image Grid Style) --------------- */
+#skills {
+    padding: 80px 0;
+    color: #fff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.skill-item:hover {
+    border-color: #ff004f;
+}
+
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.skill-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+/* --------------- Projects Section --------------- */
+#projects {
+    padding: 80px 0;
+    color: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border 0.3s;
+}
+
+.project-card:hover {
+    border-color: #ff004f;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff004f;
+}
+
+.project-info p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.project-info a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #ff004f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.project-info a:hover {
+    background-color: #ff004f;
+    color: #fff;
+}
+/* ------------------ Contact Section ------------------ */
+#contact {
+    padding: 80px 0;
+    color: #fff;
+}
+
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.contact-left, .contact-right {
+    flex-basis: 45%;
+}
+
+.contact-left p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.contact-left p img {
+    width: 20px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right input,
+.contact-right textarea {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-right .btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ff004f;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.contact-right .btn:hover {
+    background-color: #ff004f;
+}
